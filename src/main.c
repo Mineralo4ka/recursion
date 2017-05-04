@@ -5,7 +5,7 @@ int main()
 {	
 	int arr[] = {1, 32, 54, -38, -4, 76, -8, 90};
 	int N = sizeof(arr) / sizeof(int);
-	int count = 0, number = 0, num = 0, numeric = 0, j = 0;;
+	int count = 0, number = 0, num = 0, numeric = 0, j = 0;
 
 	printf("Массив: ");
 	for (int i = 0; i < N; ++i) {
@@ -25,8 +25,12 @@ int main()
 
 	//Задание 3
 	printf("\nЗадание #3\nВведите число: ");
-	scanf("%d", &num);
+	//scanf("%d", &num);
 
+	if ((scanf("%d", &num)) != 1){
+		printf("Введите нормальную строку\n");
+		return 1;
+	}
 	numeric = num;
 
 	while (numeric != 0) {
@@ -35,9 +39,9 @@ int main()
 	}
 
 	char *q = malloc(j * sizeof(char));
-	int y = string(q, num, j - 1);
+	int w = string(q, num, j - 1);
 
-	if (y == 0) {
+	if (w == 0) {
 		printf("Строка: %s\n", q);
 	}
 
